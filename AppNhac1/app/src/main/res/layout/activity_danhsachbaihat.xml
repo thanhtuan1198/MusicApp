@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator"
+    android:background="#9C27B0"
+    android:fitsSystemWindows="true"
+    tools:context=".Activity.DanhsachbaihatActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/colapsetoolbar"
+            app:expandedTitleGravity="center|bottom"
+            app:expandedTitleMarginBottom="30dp"
+            android:background="@mipmap/ic_launcher"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:background="@drawable/custom_background_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </View>
+            <android.support.v7.widget.Toolbar
+                app:popupTheme="@style/ThemeOverlay.AppCompat"
+                app:layout_collapseMode="pin"
+                android:id="@+id/tollbardanhsach"
+                android:elevation="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+            </android.support.v7.widget.Toolbar>
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginBottom="50dp"
+                android:elevation="6dp"
+                android:id="@+id/imgviewdanhsachbaihat"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingbutton"
+        app:layout_anchorGravity="bottom|center"
+        app:fabSize="normal"
+        android:scaleType="fitXY"
+        android:backgroundTint="#a845de"
+        android:src="@drawable/iconfloatingactionbutton"
+        app:layout_anchor="@id/appbarlayout"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v4.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerviewdanhsachbaihat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
